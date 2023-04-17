@@ -11,7 +11,6 @@ export default async function Bots() {
 
   return (
     <div>
-      <h1>blooptwang</h1>
       <pre>{JSON.stringify(posts, null, 2)}</pre>
     </div>
   );
