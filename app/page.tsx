@@ -1,10 +1,11 @@
-import { createClient } from "@supabase/supabase-js"
+import { headers, cookies } from 'next/headers';
+import { createServerComponentSupabaseClient } from "@supabase/auth-helpers-nextjs";
 
 export default async function Bots() {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-  );
+  const supabase = createServerComponentSupabaseClient({
+    headers,
+    cookies,
+  })
 
   const {data: posts} = await supabase.from('Bot').select();
 
