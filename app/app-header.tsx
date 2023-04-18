@@ -27,6 +27,8 @@ export default function AppHeader() {
     return url;
   };
 
+  console.log(getURL());
+
   return(
     <div className="navbar bg-base-100">
       <div className="navbar-start items-start flex">
