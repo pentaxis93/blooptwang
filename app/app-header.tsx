@@ -22,11 +22,11 @@ export default function AppHeader() {
       <div className="navbar-end items-end flex gap-3">
         {!session ? (
           <div className="flex gap-3">
-            <label htmlFor="sign-up-modal" className="btn btn-outline">Sign up</label>
-            <label htmlFor="sign-in-modal" className="btn btn-outline">Sign in</label>
+            <label htmlFor="sign-up-modal" className="btn btn-sm btn-outline">Sign up</label>
+            <label htmlFor="sign-in-modal" className="btn btn-sm btn-outline">Sign in</label>
           </div>
         ) : (
-            <button onClick={signOut} className="btn btn-outline">Sign out</button>
+            <button onClick={signOut} className="btn btn-sm btn-outline">Sign out</button>
         )}
       </div>
 
