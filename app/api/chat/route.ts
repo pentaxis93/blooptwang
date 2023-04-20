@@ -1,4 +1,4 @@
-export const runtime = "experimental-edge";
+export const runtime = "edge";
 
 if (!process.env.NEXT_PUBLIC_OPENAI_API_KEY) {
   throw new Error("Missing OpenAI API Key");
