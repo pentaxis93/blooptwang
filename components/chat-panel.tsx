@@ -39,10 +39,10 @@ export default function ChatPanel() {
 
   return (
     <div className="flex flex-col align-middle h-full p-5 items-center">
-      <div id="chat-output" className="bg-green-200 grow">
+      <div id="chat-output" className="grow w-3/5 max-w-screen-sm">
         <p>{reply}</p>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col w-3/5 grow-0 gap-3 bg-blue-200'>
+      <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col w-3/5 max-w-screen-sm grow-0 gap-3'>
         <textarea
           {...register("userInput", { required: true })}
           className="textarea textarea-primary"
