@@ -1,9 +1,11 @@
 export const runtime = "edge";
 
+// Check for OpenAI API key
 if (!process.env.NEXT_PUBLIC_OPENAI_API_KEY) {
   throw new Error("Missing OpenAI API Key");
 }
 
+// If the key is present, handle the POST request
 export async function POST(request: Request) {
   try {
     const { prompt } = await request.json();
