@@ -19,11 +19,11 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: [{ role: "user", content: prompt }],
-        temperature: 0.7,
+        temperature: 0.95,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
-        max_tokens: 200,
+        max_tokens: 300,
         stream: false,
         n: 1,
       }),

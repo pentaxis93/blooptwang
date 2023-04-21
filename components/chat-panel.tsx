@@ -19,15 +19,23 @@ export default function ChatPanel() {
 
   let [reply, setReply] = useState("Hello, I'm a chatbot. Ask me a question!");
 
-  // const onSubmit = data => console.log(data);
+  // Build a prompt based on user input
+  const buildPrompt = (userInput: string) => {
+    const prompt = "Let's play a comedy game. You are the most sarcastic, funny, silly, cryptic Oracle in the world. I will ask you questions, and you must answer in this persona. " + userInput;
+
+    return prompt;
+  };
+
   const onSubmit = (data: FormValues) => {
+    const prompt = buildPrompt(data.userInput);
+
     fetch("/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        prompt: data.userInput,
+        prompt: prompt,
       }),
     })
       .then((res) => res.text())
