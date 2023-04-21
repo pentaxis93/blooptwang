@@ -43,11 +43,11 @@ export default function ChatPanel() {
         <p>{reply}</p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col w-3/5 max-w-screen-sm grow-0 gap-3'>
-        <textarea
+        <input
           {...register("userInput", { required: true })}
           className="textarea textarea-primary"
           placeholder="Type here">
-        </textarea>
+        </input>
         <input type="submit" value="Chat" className="btn btn-primary" />
       </form>
     </div>
