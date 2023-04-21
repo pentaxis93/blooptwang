@@ -15,15 +15,15 @@ export default function AppHeader() {
   };
 
   return(
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-300">
       <div className="navbar-start items-start flex">
-        <a className="btn btn-ghost normal-case text-xl">blooptwang</a>
+        <a className="btn btn-ghost text-primary normal-case text-xl">blooptwang</a>
       </div>
       <div className="navbar-end items-end flex gap-3">
         {!session ? (
           <div className="flex gap-3">
-            <label htmlFor="sign-up-modal" className="btn btn-sm btn-outline">Sign up</label>
-            <label htmlFor="sign-in-modal" className="btn btn-sm btn-outline">Sign in</label>
+            <label htmlFor="sign-up-modal" className="btn btn-secondary btn-sm btn-outline">Sign up</label>
+            <label htmlFor="sign-in-modal" className="btn btn-sm btn-primary btn-outline">Sign in</label>
           </div>
         ) : (
             <button onClick={signOut} className="btn btn-sm btn-outline">Sign out</button>

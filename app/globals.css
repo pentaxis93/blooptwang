@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-base-300 text-base-content;
+
+  overscroll-behavior: none;
+}

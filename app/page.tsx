@@ -17,7 +17,7 @@ export default async function Bots() {
       {/* <div className='grow'> */}
       {/*   <pre>{JSON.stringify(bots, null, 2)}</pre> */}
       {/* </div> */}
-      <div className='flex flex-col w-screen grow'>
+      <div className='bg-base-100 flex flex-col w-screen grow'>
         <ChatPanel />
       </div>
     </div>
